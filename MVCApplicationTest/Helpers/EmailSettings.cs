@@ -9,12 +9,12 @@ namespace MVCApplicationTestPL.Helpers
     {
         public static void SendEmail(Email email)
         {
-            var client = new SmtpClient("smtp.gmail.com", 587);
+            var client = new SmtpClient("", 587);
             client.EnableSsl= true;
 
-            client.Credentials = new NetworkCredential("badrsaeed85@gmail.com", "qpebbegjkughlgda");
+            client.Credentials = new NetworkCredential("", "");
 
-            client.Send("badrsaeed85@gmail.com", email.To, email.Subject, email.Body);
+            client.Send("", email.To, email.Subject, email.Body);
         }
     }
 }
